@@ -55,16 +55,6 @@ export class Weather extends React.PureComponent {
     return this.props as WeatherProps;
   }
 
-  public timeslices = [
-    "00:00",
-    "3:00",
-    "6:00",
-    "9:00",
-    "12:00",
-    "15:00",
-    "18:00",
-    "21:00"
-  ];
   public render() {
     const {
       currentDate,
@@ -110,10 +100,9 @@ export class Weather extends React.PureComponent {
         )}
 
         <DaysWrapper>
-          {Object.keys(forecast)
-            .slice(1, Object.keys(forecast).length)
+          {Object.keys(forecast).filter(_date => _date !== date.format('DD-MM-YYYY'))
             .map((date: string) => (
-              <DayWrapper>
+              <DayWrapper key={date}>
                 <Day
                   selected={currentDate === date}
                   onClick={() => updateDate(date)}
