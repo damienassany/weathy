@@ -32,6 +32,15 @@ type Props = {
     onClick(): void;
 }
 
+const StyledButton = styled.button<{ selected: boolean; }>`
+    border: none;
+    background: none;
+
+    &:focus {
+        outline: ${props => props.selected ? 'none': '1px solid #75A4FF'};
+    }
+`;
+
 export const DatePanel: React.FC<Props> = ({ outline = false, onClick }) => {
     const [date, setDate] = React.useState(moment().format('ddd, DD, MMM.'))
     const [time, setTime] = React.useState(moment().format('HH:mm'))
@@ -48,9 +57,11 @@ export const DatePanel: React.FC<Props> = ({ outline = false, onClick }) => {
     }, []);
 
     return (
-        <Wrapper outline={outline} onClick={onClick}>
-            <Date>{date}</Date>
-            <Time>{time}</Time>
-        </Wrapper>
+        <StyledButton onClick={onClick} selected={outline}>
+            <Wrapper outline={outline}>
+                <Date>{date}</Date>
+                <Time>{time}</Time>
+            </Wrapper>
+        </StyledButton>
     )
 };

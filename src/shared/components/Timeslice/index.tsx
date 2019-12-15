@@ -7,7 +7,7 @@ type Props = {
     onClick(): void;
 }
 
-const Wrapper = styled.div<{ selected: boolean; }>`
+const Wrapper = styled.button<{ selected: boolean; }>`
     padding: 8px;
     background-color: ${props => props.selected ? "#E7E7E7" : "white"};
     display: flex;
@@ -15,6 +15,8 @@ const Wrapper = styled.div<{ selected: boolean; }>`
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    border: none;
+    font-size: 16px;
 `;
 
 const Label = styled.p`

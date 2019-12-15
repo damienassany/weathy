@@ -115,7 +115,7 @@ export class Weather extends React.PureComponent {
             .map((date: string) => (
               <DayWrapper>
                 <Day
-                    selected={currentDate === date}
+                  selected={currentDate === date}
                   onClick={() => updateDate(date)}
                   label={moment(date, "DD-MM-YYYY").format("ddd. DD")}
                   icon={Icons[forecast[date][0].weather[0].icon]}

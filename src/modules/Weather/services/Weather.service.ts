@@ -6,7 +6,7 @@ class WeatherService {
     public city = "edinburgh,GB";
 
     public fetchForecast = () => {
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.city}&APPID=${this.APP_ID}&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${this.city}&APPID=${this.APP_ID}&units=metric`)
             .then(res => res.json())
             .then((res: Forecast) => {                
                 const dataFormatted: Forecast = res.list.reduce((acc: Forecast, curr: Timeslice) => {
