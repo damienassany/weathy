@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 storiesOf("Day", module)
   .add("Default", () => (
     <Day
+      onClick={() => null}
       icon={Icons["02d"]}
       label={"Mon. 16"}
       temperatures={{ min: "1°", max: "5°" }}
@@ -19,6 +20,7 @@ storiesOf("Day", module)
   .add("Sized", () => (
     <Wrapper>
       <Day
+        onClick={() => null}
         icon={Icons["02d"]}
         label={"Mon. 16"}
         temperatures={{ min: "1°", max: "5°" }}
@@ -28,6 +30,7 @@ storiesOf("Day", module)
   .add("Selected", () => (
     <Wrapper>
       <Day
+        onClick={() => null}
         selected={true}
         icon={Icons["02d"]}
         label={"Mon. 16"}

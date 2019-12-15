@@ -8,10 +8,10 @@ const Wrapper = styled.div`
 `;
 
 storiesOf('DatePanel', module)
-    .add('Default', () => <DatePanel date="Sun, 15 Dec." time="11:32 am" />)
-    .add('Outlined', () => <DatePanel outline={true} date="Sun, 15 Dec." time="11:32 am" />)
+    .add('Default', () => <DatePanel onClick={() => null} />)
+    .add('Outlined', () => <DatePanel onClick={() => null} outline={true} />)
     .add('Sized', () => (
         <Wrapper>
-            <DatePanel outline={true} date="Sun, 15 Dec." time="11:32 am" />
+            <DatePanel onClick={() => null} outline={true} />
         </Wrapper>
     ));

@@ -12,6 +12,7 @@ type Props = {
         max: string;
     };
     selected?: boolean;
+    onClick(): void;
 }
 
 const StyledColumn = styled(Column)<{ selected: boolean; }>`
@@ -27,8 +28,8 @@ const Label = styled.p`
   font-weight: 700;  
 `;
 
-export const Day: React.FC<Props> = ({ label, icon, temperatures, selected = false }) => (
-    <StyledColumn selected={selected}>
+export const Day: React.FC<Props> = ({ label, icon, temperatures, selected = false, onClick }) => (
+    <StyledColumn selected={selected} onClick={onClick}>
         <Label>{label}</Label>
         <Icon name={icon} size={80} />
         <TempsOfTheDay {...temperatures} />

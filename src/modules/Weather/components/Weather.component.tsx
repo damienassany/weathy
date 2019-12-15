@@ -1,44 +1,47 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { Row } from '../../../shared/components/Row';
-import { Title } from '../../../shared/components/Title';
-import { DatePanel } from '../../../shared/components/DatePanel';
-import { TempWithIcon } from '../../../shared/components/TempWithIcon';
-import { Icons } from '../../../shared/components/Icon';
-import { TempsOfTheDay } from '../../../shared/components/TempsOfTheDay';
-import { Timeslice } from '../../../shared/components/Timeslice';
-import { Day } from '../../../shared/components/Day';
-import { Column } from '../../../shared/components/Column';
+import * as React from "react";
+import styled from "styled-components";
+import { Row } from "../../../shared/components/Row";
+import { Title } from "../../../shared/components/Title";
+import { DatePanel } from "../../../shared/components/DatePanel";
+import { TempWithIcon } from "../../../shared/components/TempWithIcon";
+import { Icons } from "../../../shared/components/Icon";
+import { TempsOfTheDay } from "../../../shared/components/TempsOfTheDay";
+import { Timeslice } from "../../../shared/components/Timeslice";
+import { Day } from "../../../shared/components/Day";
+import { Column } from "../../../shared/components/Column";
+import { WeatherProps } from "../containers/Weather.container";
+import { observer } from "mobx-react";
+import moment from "moment";
 
 const Logo = styled.p`
-    width: 140px;
+  width: 140px;
 `;
 
 const Wrapper = styled(Column)`
-    flex: 1;
+  flex: 1;
 `;
 
 const DatePanelWrapper = styled.div`
-    width: 140px;
+  width: 140px;
 `;
 
 const TempWithIconWrapper = styled(Row)`
-    max-width: 300px;
-    align-self: center;
+  max-width: 300px;
+  align-self: center;
 `;
 
 const TimesliceWrapper = styled.div`
-    margin-right: 20px;
+  margin-right: 20px;
 `;
 
 const TimeslicesWrapper = styled(Row)`
-    max-width: 760px;
-    align-self: center;
-    overflow: scroll;
+  max-width: 760px;
+  align-self: center;
+  overflow: scroll;
 `;
 
 const DayWrapper = styled.div`
-    width: 20%;
+  width: 18%;
 `;
 
 const DaysWrapper = styled(Row)`
@@ -46,55 +49,91 @@ const DaysWrapper = styled(Row)`
   justify-content: space-around;
   margin-top: 30px;
 `;
-
+@observer
 export class Weather extends React.PureComponent {
-    public timeslices = ["00:00", "3:00", "6:00", "9:00", "12:00", "15:00", "18:00", "21:00"];
-    public render() {
-        return (
-            <Wrapper>
-                <Row>
-                    <Logo>Weathy</Logo>
-                    <Title>Edinburgh</Title>
-                    <DatePanelWrapper>
-                        <DatePanel
-                            outline={true}
-                            date={"Sun, 15 Dec."}
-                            time={"11:32 am"}
-                        />
-                    </DatePanelWrapper>
-                </Row>
+  public get _props() {
+    return this.props as WeatherProps;
+  }
 
-                <TempWithIconWrapper>
-                    <TempWithIcon
-                        icon={Icons["02d"]}
-                        value="9°"
-                    />
-                    <TempsOfTheDay min={"2°"} max={"10°"} />
-                </TempWithIconWrapper>
-                
-                <TimeslicesWrapper>
-                    { this.timeslices.map((timeslice, index) => (
-                        <TimesliceWrapper>
-                            <Timeslice label={timeslice} selected={index === 2} onClick={() => null} />
-                        </TimesliceWrapper>
-                    ))}
-                </TimeslicesWrapper>
+  public timeslices = [
+    "00:00",
+    "3:00",
+    "6:00",
+    "9:00",
+    "12:00",
+    "15:00",
+    "18:00",
+    "21:00"
+  ];
+  public render() {
+    const {
+      currentDate,
+      currentSelectedTimesliceIndex,
+      currentTimeslice,
+      forecast,
+      updateDate,
+      updateTimesliceIndex
+    } = this._props;
+    const date = moment();
+    return (
+      <Wrapper>
+        <Row>
+          <Logo>Weathy</Logo>
+          <Title onClick={() => updateDate(date.format("DD-MM-YYYY"))}>Edinburgh</Title>
+          <DatePanelWrapper>
+            <DatePanel onClick={() => updateDate(date.format("DD-MM-YYYY"))} outline={currentDate === date.format("DD-MM-YYYY")} />
+          </DatePanelWrapper>
+        </Row>
 
-                <DaysWrapper>
-                    { new Array(4).fill(1).map(day => (
-                        <DayWrapper>
-                            <Day
-                                label={"Mon. 16"}
-                                icon={Icons["02d"]}
-                                temperatures={{
-                                    min: '1°',
-                                    max: '5°'
-                                }}
-                            />
-                        </DayWrapper>
-                    )) }
-                </DaysWrapper>
-            </Wrapper>
-        );
-    }
+        {currentTimeslice && (
+          <TempWithIconWrapper>
+            <TempWithIcon
+              icon={Icons[currentTimeslice.weather[0].icon]}
+              value={`${currentTimeslice.main.temp.toFixed(1)}°`}
+            />
+            <TempsOfTheDay min={'1°'} max={'10°'} />
+          </TempWithIconWrapper>
+        )}
+
+        {currentTimeslice && (
+          <TimeslicesWrapper>
+            {forecast[currentDate].map((timeslice, index) => (
+              <TimesliceWrapper>
+                <Timeslice
+                  label={moment(timeslice.dt_txt).format("HH:mm")}
+                  selected={index === currentSelectedTimesliceIndex}
+                  onClick={() => updateTimesliceIndex(index)}
+                />
+              </TimesliceWrapper>
+            ))}
+          </TimeslicesWrapper>
+        )}
+
+        <DaysWrapper>
+          {Object.keys(forecast)
+            .slice(1, Object.keys(forecast).length)
+            .map((date: string) => (
+              <DayWrapper>
+                <Day
+                    selected={currentDate === date}
+                  onClick={() => updateDate(date)}
+                  label={moment(date, "DD-MM-YYYY").format("ddd. DD")}
+                  icon={Icons[forecast[date][0].weather[0].icon]}
+                  temperatures={{
+                    min: "1°",
+                    max: "5°"
+                  }}
+                />
+              </DayWrapper>
+            ))}
+        </DaysWrapper>
+      </Wrapper>
+    );
+  }
+
+  public componentDidMount = () => {
+    const { fetchForecast } = this._props;
+
+    fetchForecast();
+  };
 }

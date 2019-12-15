@@ -1,12 +1,12 @@
 import React from 'react';
 import { Provider } from 'mobx-react';
 import stores from './stores';
-import { Weather } from './modules/Weather/components/Weather.component';
+import { WeatherContainer } from './modules/Weather/containers/Weather.container';
 
 const App: React.FC = () => {
   return (
     <Provider {...stores}>
-      <Weather />
+      <WeatherContainer />
     </Provider>
   );
 }

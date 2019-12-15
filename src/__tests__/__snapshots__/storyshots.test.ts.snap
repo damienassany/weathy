@@ -1,0 +1,444 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots DatePanel Default 1`] = `
+<div
+  className="sc-bdVaJa sc-bxivhb gBVacm"
+>
+  <p
+    className="sc-bwzfXH eYinRc"
+  >
+    Sun, 15 Dec.
+  </p>
+  <p
+    className="sc-htpNat ieahgN"
+  >
+    11:32 am
+  </p>
+</div>
+`;
+
+exports[`Storyshots DatePanel Outlined 1`] = `
+<div
+  className="sc-bdVaJa sc-bxivhb bHYiZb"
+>
+  <p
+    className="sc-bwzfXH eYinRc"
+  >
+    Sun, 15 Dec.
+  </p>
+  <p
+    className="sc-htpNat ieahgN"
+  >
+    11:32 am
+  </p>
+</div>
+`;
+
+exports[`Storyshots DatePanel Sized 1`] = `
+<div
+  className="sc-ifAKCX isanNQ"
+>
+  <div
+    className="sc-bdVaJa sc-bxivhb bHYiZb"
+  >
+    <p
+      className="sc-bwzfXH eYinRc"
+    >
+      Sun, 15 Dec.
+    </p>
+    <p
+      className="sc-htpNat ieahgN"
+    >
+      11:32 am
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Day Default 1`] = `
+<div
+  className="sc-bdVaJa sc-gzVnrw fBJyAs"
+  selected={false}
+>
+  <p
+    className="sc-htoDjs khEhBP"
+  >
+    Mon. 16
+  </p>
+  <img
+    alt="weather-icon"
+    className="sc-EHOje bkVllH"
+    size={80}
+    src="http://openweathermap.org/img/wn/02d@2x.png"
+  />
+  <div
+    className="sc-bdVaJa jFsIQD"
+  >
+    <p
+      className="sc-bZQynM gmUpAl"
+    >
+      min: 
+      1°
+    </p>
+    <p
+      className="sc-bZQynM gmUpAl"
+    >
+      max: 
+      5°
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Day Selected 1`] = `
+<div
+  className="sc-dnqmqq kbCNc"
+>
+  <div
+    className="sc-bdVaJa sc-gzVnrw bUlSEA"
+    selected={true}
+  >
+    <p
+      className="sc-htoDjs khEhBP"
+    >
+      Mon. 16
+    </p>
+    <img
+      alt="weather-icon"
+      className="sc-EHOje bkVllH"
+      size={80}
+      src="http://openweathermap.org/img/wn/02d@2x.png"
+    />
+    <div
+      className="sc-bdVaJa jFsIQD"
+    >
+      <p
+        className="sc-bZQynM gmUpAl"
+      >
+        min: 
+        1°
+      </p>
+      <p
+        className="sc-bZQynM gmUpAl"
+      >
+        max: 
+        5°
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Day Sized 1`] = `
+<div
+  className="sc-dnqmqq kbCNc"
+>
+  <div
+    className="sc-bdVaJa sc-gzVnrw fBJyAs"
+    selected={false}
+  >
+    <p
+      className="sc-htoDjs khEhBP"
+    >
+      Mon. 16
+    </p>
+    <img
+      alt="weather-icon"
+      className="sc-EHOje bkVllH"
+      size={80}
+      src="http://openweathermap.org/img/wn/02d@2x.png"
+    />
+    <div
+      className="sc-bdVaJa jFsIQD"
+    >
+      <p
+        className="sc-bZQynM gmUpAl"
+      >
+        min: 
+        1°
+      </p>
+      <p
+        className="sc-bZQynM gmUpAl"
+      >
+        max: 
+        5°
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Icon Broken clouds day 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/04d@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Broken clouds night 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/04n@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Clear sky day 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/01d@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Clear sky night 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/01n@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Few clouds day 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/02d@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Few clouds night 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/02n@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Mist day 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/50d@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Mist night 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/50n@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Rain day 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/10d@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Rain night 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/10n@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Scattered clouds day 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/03d@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Scattered clouds night 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/03n@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Shower rain day 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/09d@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Shower rain night 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/09n@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Snow day 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/13d@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Snow night 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/13n@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Thunderstorm day 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/11d@2x.png"
+/>
+`;
+
+exports[`Storyshots Icon Thunderstorm night 1`] = `
+<img
+  alt="weather-icon"
+  className="sc-EHOje ZNYBj"
+  size={60}
+  src="http://openweathermap.org/img/wn/11n@2x.png"
+/>
+`;
+
+exports[`Storyshots TempWithIcon Default 1`] = `
+<div
+  className="sc-iwsKbI gMxrYf"
+>
+  <img
+    alt="weather-icon"
+    className="sc-EHOje bkVllH"
+    size={80}
+    src="http://openweathermap.org/img/wn/02d@2x.png"
+  />
+  <p
+    className="sc-gZMcBi dXZzYA"
+  >
+    9°
+  </p>
+</div>
+`;
+
+exports[`Storyshots TempWithIcon Sized 1`] = `
+<div
+  className="sc-gqjmRU iYzznD"
+>
+  <div
+    className="sc-iwsKbI gMxrYf"
+  >
+    <img
+      alt="weather-icon"
+      className="sc-EHOje bkVllH"
+      size={80}
+      src="http://openweathermap.org/img/wn/02d@2x.png"
+    />
+    <p
+      className="sc-gZMcBi dXZzYA"
+    >
+      9°
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TempsOfTheDay Default 1`] = `
+<div
+  className="sc-bdVaJa jFsIQD"
+>
+  <p
+    className="sc-bZQynM gmUpAl"
+  >
+    min: 
+    2°
+  </p>
+  <p
+    className="sc-bZQynM gmUpAl"
+  >
+    max: 
+    10°
+  </p>
+</div>
+`;
+
+exports[`Storyshots Timeslice Default 1`] = `
+<div
+  className="sc-VigVT kUeBOR"
+  onClick={[Function]}
+  selected={false}
+>
+  <p
+    className="sc-jTzLTM cOeWGY"
+  >
+    12:00
+  </p>
+</div>
+`;
+
+exports[`Storyshots Timeslice Selected 1`] = `
+<div
+  className="sc-VigVT gbnJAo"
+  onClick={[Function]}
+  selected={true}
+>
+  <p
+    className="sc-jTzLTM cOeWGY"
+  >
+    12:00
+  </p>
+</div>
+`;
+
+exports[`Storyshots Timeslice Sized 1`] = `
+<div
+  className="sc-fjdhpX cmfmlu"
+>
+  <div
+    className="sc-VigVT gbnJAo"
+    onClick={[Function]}
+    selected={true}
+  >
+    <p
+      className="sc-jTzLTM cOeWGY"
+    >
+      12:00
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Title Default 1`] = `
+<p
+  className="sc-jzJRlG bVAasF"
+>
+  Edinburgh
+</p>
+`;
