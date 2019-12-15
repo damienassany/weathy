@@ -36,5 +36,5 @@ const StyledIcon = styled.img<{ size: number; }>`
 `;
 
 export const Icon: React.FC<Props> = ({ size, name }) => (
-    <StyledIcon size={size} src={name} /> 
+    <StyledIcon alt="weather-icon" size={size} src={name} /> 
 );
