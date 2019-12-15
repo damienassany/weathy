@@ -16,3 +16,7 @@ code {
   font-family: "Roboto-Light";
   src: url("/assets/fonts/Roboto-Light.ttf") format("truetype");
 }
+
+* {
+  font-family: "Roboto-Light";  
+}
