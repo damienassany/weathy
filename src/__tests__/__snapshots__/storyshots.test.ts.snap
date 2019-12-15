@@ -1,42 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots DatePanel Default 1`] = `
-<div
-  className="sc-bdVaJa sc-bxivhb gBVacm"
+<button
+  className="sc-ifAKCX gVaZAi"
+  onClick={[Function]}
+  selected={false}
 >
-  <p
-    className="sc-bwzfXH eYinRc"
+  <div
+    className="sc-bdVaJa sc-bxivhb gBVacm"
   >
-    Sun, 15 Dec.
-  </p>
-  <p
-    className="sc-htpNat ieahgN"
-  >
-    11:32 am
-  </p>
-</div>
+    <p
+      className="sc-bwzfXH eYinRc"
+    >
+      Sun, 15, Dec.
+    </p>
+    <p
+      className="sc-htpNat ieahgN"
+    >
+      22:27
+    </p>
+  </div>
+</button>
 `;
 
 exports[`Storyshots DatePanel Outlined 1`] = `
-<div
-  className="sc-bdVaJa sc-bxivhb bHYiZb"
->
-  <p
-    className="sc-bwzfXH eYinRc"
-  >
-    Sun, 15 Dec.
-  </p>
-  <p
-    className="sc-htpNat ieahgN"
-  >
-    11:32 am
-  </p>
-</div>
-`;
-
-exports[`Storyshots DatePanel Sized 1`] = `
-<div
-  className="sc-ifAKCX isanNQ"
+<button
+  className="sc-ifAKCX dsHFuC"
+  onClick={[Function]}
+  selected={true}
 >
   <div
     className="sc-bdVaJa sc-bxivhb bHYiZb"
@@ -44,68 +35,62 @@ exports[`Storyshots DatePanel Sized 1`] = `
     <p
       className="sc-bwzfXH eYinRc"
     >
-      Sun, 15 Dec.
+      Sun, 15, Dec.
     </p>
     <p
       className="sc-htpNat ieahgN"
     >
-      11:32 am
+      22:27
     </p>
   </div>
+</button>
+`;
+
+exports[`Storyshots DatePanel Sized 1`] = `
+<div
+  className="sc-EHOje fqSoJR"
+>
+  <button
+    className="sc-ifAKCX dsHFuC"
+    onClick={[Function]}
+    selected={true}
+  >
+    <div
+      className="sc-bdVaJa sc-bxivhb bHYiZb"
+    >
+      <p
+        className="sc-bwzfXH eYinRc"
+      >
+        Sun, 15, Dec.
+      </p>
+      <p
+        className="sc-htpNat ieahgN"
+      >
+        22:27
+      </p>
+    </div>
+  </button>
 </div>
 `;
 
 exports[`Storyshots Day Default 1`] = `
-<div
-  className="sc-bdVaJa sc-gzVnrw fBJyAs"
+<button
+  className="sc-iwsKbI dEOVJJ"
+  onClick={[Function]}
   selected={false}
 >
-  <p
-    className="sc-htoDjs khEhBP"
-  >
-    Mon. 16
-  </p>
-  <img
-    alt="weather-icon"
-    className="sc-EHOje bkVllH"
-    size={80}
-    src="http://openweathermap.org/img/wn/02d@2x.png"
-  />
   <div
-    className="sc-bdVaJa jFsIQD"
+    className="sc-bdVaJa sc-htoDjs eqSTEs"
+    selected={false}
   >
     <p
-      className="sc-bZQynM gmUpAl"
-    >
-      min: 
-      1°
-    </p>
-    <p
-      className="sc-bZQynM gmUpAl"
-    >
-      max: 
-      5°
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Day Selected 1`] = `
-<div
-  className="sc-dnqmqq kbCNc"
->
-  <div
-    className="sc-bdVaJa sc-gzVnrw bUlSEA"
-    selected={true}
-  >
-    <p
-      className="sc-htoDjs khEhBP"
+      className="sc-dnqmqq hYLeBK"
     >
       Mon. 16
     </p>
     <img
       alt="weather-icon"
-      className="sc-EHOje bkVllH"
+      className="sc-bZQynM kDzsBS"
       size={80}
       src="http://openweathermap.org/img/wn/02d@2x.png"
     />
@@ -113,65 +98,116 @@ exports[`Storyshots Day Selected 1`] = `
       className="sc-bdVaJa jFsIQD"
     >
       <p
-        className="sc-bZQynM gmUpAl"
+        className="sc-gzVnrw cAeWqA"
       >
         min: 
         1°
       </p>
       <p
-        className="sc-bZQynM gmUpAl"
+        className="sc-gzVnrw cAeWqA"
       >
         max: 
         5°
       </p>
     </div>
   </div>
+</button>
+`;
+
+exports[`Storyshots Day Selected 1`] = `
+<div
+  className="sc-gZMcBi giFyfe"
+>
+  <button
+    className="sc-iwsKbI kbkokl"
+    onClick={[Function]}
+    selected={true}
+  >
+    <div
+      className="sc-bdVaJa sc-htoDjs httnCg"
+      selected={true}
+    >
+      <p
+        className="sc-dnqmqq hYLeBK"
+      >
+        Mon. 16
+      </p>
+      <img
+        alt="weather-icon"
+        className="sc-bZQynM kDzsBS"
+        size={80}
+        src="http://openweathermap.org/img/wn/02d@2x.png"
+      />
+      <div
+        className="sc-bdVaJa jFsIQD"
+      >
+        <p
+          className="sc-gzVnrw cAeWqA"
+        >
+          min: 
+          1°
+        </p>
+        <p
+          className="sc-gzVnrw cAeWqA"
+        >
+          max: 
+          5°
+        </p>
+      </div>
+    </div>
+  </button>
 </div>
 `;
 
 exports[`Storyshots Day Sized 1`] = `
 <div
-  className="sc-dnqmqq kbCNc"
+  className="sc-gZMcBi giFyfe"
 >
-  <div
-    className="sc-bdVaJa sc-gzVnrw fBJyAs"
+  <button
+    className="sc-iwsKbI dEOVJJ"
+    onClick={[Function]}
     selected={false}
   >
-    <p
-      className="sc-htoDjs khEhBP"
-    >
-      Mon. 16
-    </p>
-    <img
-      alt="weather-icon"
-      className="sc-EHOje bkVllH"
-      size={80}
-      src="http://openweathermap.org/img/wn/02d@2x.png"
-    />
     <div
-      className="sc-bdVaJa jFsIQD"
+      className="sc-bdVaJa sc-htoDjs eqSTEs"
+      selected={false}
     >
       <p
-        className="sc-bZQynM gmUpAl"
+        className="sc-dnqmqq hYLeBK"
       >
-        min: 
-        1°
+        Mon. 16
       </p>
-      <p
-        className="sc-bZQynM gmUpAl"
+      <img
+        alt="weather-icon"
+        className="sc-bZQynM kDzsBS"
+        size={80}
+        src="http://openweathermap.org/img/wn/02d@2x.png"
+      />
+      <div
+        className="sc-bdVaJa jFsIQD"
       >
-        max: 
-        5°
-      </p>
+        <p
+          className="sc-gzVnrw cAeWqA"
+        >
+          min: 
+          1°
+        </p>
+        <p
+          className="sc-gzVnrw cAeWqA"
+        >
+          max: 
+          5°
+        </p>
+      </div>
     </div>
-  </div>
+  </button>
 </div>
 `;
 
 exports[`Storyshots Icon Broken clouds day 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/04d@2x.png"
 />
@@ -180,7 +216,7 @@ exports[`Storyshots Icon Broken clouds day 1`] = `
 exports[`Storyshots Icon Broken clouds night 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/04n@2x.png"
 />
@@ -189,7 +225,7 @@ exports[`Storyshots Icon Broken clouds night 1`] = `
 exports[`Storyshots Icon Clear sky day 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/01d@2x.png"
 />
@@ -198,7 +234,7 @@ exports[`Storyshots Icon Clear sky day 1`] = `
 exports[`Storyshots Icon Clear sky night 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/01n@2x.png"
 />
@@ -207,7 +243,7 @@ exports[`Storyshots Icon Clear sky night 1`] = `
 exports[`Storyshots Icon Few clouds day 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/02d@2x.png"
 />
@@ -216,7 +252,7 @@ exports[`Storyshots Icon Few clouds day 1`] = `
 exports[`Storyshots Icon Few clouds night 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/02n@2x.png"
 />
@@ -225,7 +261,7 @@ exports[`Storyshots Icon Few clouds night 1`] = `
 exports[`Storyshots Icon Mist day 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/50d@2x.png"
 />
@@ -234,7 +270,7 @@ exports[`Storyshots Icon Mist day 1`] = `
 exports[`Storyshots Icon Mist night 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/50n@2x.png"
 />
@@ -243,7 +279,7 @@ exports[`Storyshots Icon Mist night 1`] = `
 exports[`Storyshots Icon Rain day 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/10d@2x.png"
 />
@@ -252,7 +288,7 @@ exports[`Storyshots Icon Rain day 1`] = `
 exports[`Storyshots Icon Rain night 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/10n@2x.png"
 />
@@ -261,7 +297,7 @@ exports[`Storyshots Icon Rain night 1`] = `
 exports[`Storyshots Icon Scattered clouds day 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/03d@2x.png"
 />
@@ -270,7 +306,7 @@ exports[`Storyshots Icon Scattered clouds day 1`] = `
 exports[`Storyshots Icon Scattered clouds night 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/03n@2x.png"
 />
@@ -279,7 +315,7 @@ exports[`Storyshots Icon Scattered clouds night 1`] = `
 exports[`Storyshots Icon Shower rain day 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/09d@2x.png"
 />
@@ -288,7 +324,7 @@ exports[`Storyshots Icon Shower rain day 1`] = `
 exports[`Storyshots Icon Shower rain night 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/09n@2x.png"
 />
@@ -297,7 +333,7 @@ exports[`Storyshots Icon Shower rain night 1`] = `
 exports[`Storyshots Icon Snow day 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/13d@2x.png"
 />
@@ -306,7 +342,7 @@ exports[`Storyshots Icon Snow day 1`] = `
 exports[`Storyshots Icon Snow night 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/13n@2x.png"
 />
@@ -315,7 +351,7 @@ exports[`Storyshots Icon Snow night 1`] = `
 exports[`Storyshots Icon Thunderstorm day 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/11d@2x.png"
 />
@@ -324,7 +360,7 @@ exports[`Storyshots Icon Thunderstorm day 1`] = `
 exports[`Storyshots Icon Thunderstorm night 1`] = `
 <img
   alt="weather-icon"
-  className="sc-EHOje ZNYBj"
+  className="sc-bZQynM kzEneW"
   size={60}
   src="http://openweathermap.org/img/wn/11n@2x.png"
 />
@@ -332,16 +368,16 @@ exports[`Storyshots Icon Thunderstorm night 1`] = `
 
 exports[`Storyshots TempWithIcon Default 1`] = `
 <div
-  className="sc-iwsKbI gMxrYf"
+  className="sc-gqjmRU fSkQHM"
 >
   <img
     alt="weather-icon"
-    className="sc-EHOje bkVllH"
+    className="sc-bZQynM kDzsBS"
     size={80}
     src="http://openweathermap.org/img/wn/02d@2x.png"
   />
   <p
-    className="sc-gZMcBi dXZzYA"
+    className="sc-VigVT bYzbjH"
   >
     9°
   </p>
@@ -350,19 +386,19 @@ exports[`Storyshots TempWithIcon Default 1`] = `
 
 exports[`Storyshots TempWithIcon Sized 1`] = `
 <div
-  className="sc-gqjmRU iYzznD"
+  className="sc-jTzLTM dQxiEl"
 >
   <div
-    className="sc-iwsKbI gMxrYf"
+    className="sc-gqjmRU fSkQHM"
   >
     <img
       alt="weather-icon"
-      className="sc-EHOje bkVllH"
+      className="sc-bZQynM kDzsBS"
       size={80}
       src="http://openweathermap.org/img/wn/02d@2x.png"
     />
     <p
-      className="sc-gZMcBi dXZzYA"
+      className="sc-VigVT bYzbjH"
     >
       9°
     </p>
@@ -375,13 +411,13 @@ exports[`Storyshots TempsOfTheDay Default 1`] = `
   className="sc-bdVaJa jFsIQD"
 >
   <p
-    className="sc-bZQynM gmUpAl"
+    className="sc-gzVnrw cAeWqA"
   >
     min: 
     2°
   </p>
   <p
-    className="sc-bZQynM gmUpAl"
+    className="sc-gzVnrw cAeWqA"
   >
     max: 
     10°
@@ -390,54 +426,54 @@ exports[`Storyshots TempsOfTheDay Default 1`] = `
 `;
 
 exports[`Storyshots Timeslice Default 1`] = `
-<div
-  className="sc-VigVT kUeBOR"
+<button
+  className="sc-fjdhpX eNZrSr"
   onClick={[Function]}
   selected={false}
 >
   <p
-    className="sc-jTzLTM cOeWGY"
+    className="sc-jzJRlG hveoRz"
   >
     12:00
   </p>
-</div>
+</button>
 `;
 
 exports[`Storyshots Timeslice Selected 1`] = `
-<div
-  className="sc-VigVT gbnJAo"
+<button
+  className="sc-fjdhpX byJkBY"
   onClick={[Function]}
   selected={true}
 >
   <p
-    className="sc-jTzLTM cOeWGY"
+    className="sc-jzJRlG hveoRz"
   >
     12:00
   </p>
-</div>
+</button>
 `;
 
 exports[`Storyshots Timeslice Sized 1`] = `
 <div
-  className="sc-fjdhpX cmfmlu"
+  className="sc-cSHVUG dMgnZf"
 >
-  <div
-    className="sc-VigVT gbnJAo"
+  <button
+    className="sc-fjdhpX byJkBY"
     onClick={[Function]}
     selected={true}
   >
     <p
-      className="sc-jTzLTM cOeWGY"
+      className="sc-jzJRlG hveoRz"
     >
       12:00
     </p>
-  </div>
+  </button>
 </div>
 `;
 
 exports[`Storyshots Title Default 1`] = `
 <p
-  className="sc-jzJRlG bVAasF"
+  className="sc-kAzzGY eMnoGp"
 >
   Edinburgh
 </p>
