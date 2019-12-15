@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import { Column } from '../Column';
 
 const Date = styled.p`
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 700;
     color: black;
     margin: 0;
 `;
 
 const Time = styled.p`
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 300;
     color: black;
     margin: 0;
