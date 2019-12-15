@@ -28,10 +28,23 @@ const Label = styled.p`
   font-weight: 700;  
 `;
 
+const StyledButton = styled.button<{ selected: boolean; }>`
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 18px;
+
+    &:focus {
+        outline: ${props => props.selected ? 'none': '1px solid #75A4FF'};
+    }
+`;
+
 export const Day: React.FC<Props> = ({ label, icon, temperatures, selected = false, onClick }) => (
-    <StyledColumn selected={selected} onClick={onClick}>
-        <Label>{label}</Label>
-        <Icon name={icon} size={80} />
-        <TempsOfTheDay {...temperatures} />
-    </StyledColumn>
+    <StyledButton onClick={onClick} selected={selected}>
+        <StyledColumn selected={selected}>
+            <Label>{label}</Label>
+            <Icon name={icon} size={80} />
+            <TempsOfTheDay {...temperatures} />
+        </StyledColumn>
+    </StyledButton>
 );
