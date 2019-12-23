@@ -12,12 +12,12 @@ exports[`Storyshots DatePanel Default 1`] = `
     <p
       className="sc-bwzfXH eYinRc"
     >
-      Sun, 15, Dec.
+      22 May 17:00
     </p>
     <p
       className="sc-htpNat ieahgN"
     >
-      22:27
+      22 May 17:00
     </p>
   </div>
 </button>
@@ -35,12 +35,12 @@ exports[`Storyshots DatePanel Outlined 1`] = `
     <p
       className="sc-bwzfXH eYinRc"
     >
-      Sun, 15, Dec.
+      22 May 17:00
     </p>
     <p
       className="sc-htpNat ieahgN"
     >
-      22:27
+      22 May 17:00
     </p>
   </div>
 </button>
@@ -61,12 +61,12 @@ exports[`Storyshots DatePanel Sized 1`] = `
       <p
         className="sc-bwzfXH eYinRc"
       >
-        Sun, 15, Dec.
+        22 May 17:00
       </p>
       <p
         className="sc-htpNat ieahgN"
       >
-        22:27
+        22 May 17:00
       </p>
     </div>
   </button>

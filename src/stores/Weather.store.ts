@@ -24,6 +24,7 @@ export class WeatherStore {
   @observable forecast: Forecast = {};
   @observable currentDate: string = moment().format("DD-MM-YYYY");
   @observable currentSelectedTimesliceIndex = 0;
+  @observable error: string | null = null;
 
   @action updateForecast = (data: Forecast) => {
     this.forecast = data;
@@ -36,6 +37,10 @@ export class WeatherStore {
 
   @action updateCurrentSelectedTimesliceIndex = (index: number) => {
     this.currentSelectedTimesliceIndex = index;
+  }
+
+  @action updateError = (error: string) => {
+    this.error = error;
   }
 
   @computed get currentTimeslice() {

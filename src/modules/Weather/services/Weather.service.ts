@@ -2,7 +2,7 @@ import moment from 'moment';
 import { Forecast, Timeslice, weatherStore } from '../../../stores/Weather.store';
 
 class WeatherService {
-    private APP_ID = '56b00a1646d0c0ee53e24eaa14d0d536';
+    private APP_ID = process.env['REACT_APP_APPLICATION_ID'];
     public city = "edinburgh,GB";
 
     public fetchForecast = () => {
@@ -24,6 +24,10 @@ class WeatherService {
                 }, {});                
 
                 weatherStore.updateForecast(dataFormatted);
+            })
+            .catch(e => {
+                console.log({ e });
+                weatherStore.updateError(e.message);
             });
     }
 }

@@ -49,6 +49,7 @@ const DaysWrapper = styled(Row)`
   justify-content: space-around;
   margin-top: 30px;
 `;
+
 @observer
 export class Weather extends React.PureComponent {
   public get _props() {
@@ -62,9 +63,11 @@ export class Weather extends React.PureComponent {
       currentTimeslice,
       forecast,
       updateDate,
-      updateTimesliceIndex
+      updateTimesliceIndex,
+      error
     } = this._props;
     const date = moment();
+    
     return (
       <Wrapper>
         <Row>
@@ -75,47 +78,59 @@ export class Weather extends React.PureComponent {
           </DatePanelWrapper>
         </Row>
 
-        {currentTimeslice && (
-          <TempWithIconWrapper>
-            <TempWithIcon
-              icon={Icons[currentTimeslice.weather[0].icon]}
-              value={`${currentTimeslice.main.temp.toFixed(1)}°`}
-            />
-            <TempsOfTheDay min={'1°'} max={'10°'} />
-          </TempWithIconWrapper>
-        )}
-
-        {currentTimeslice && (
-          <TimeslicesWrapper>
-            {forecast[currentDate].map((timeslice, index) => (
-              <TimesliceWrapper>
-                <Timeslice
-                  label={moment(timeslice.dt_txt).format("HH:mm")}
-                  selected={index === currentSelectedTimesliceIndex}
-                  onClick={() => updateTimesliceIndex(index)}
-                />
-              </TimesliceWrapper>
-            ))}
-          </TimeslicesWrapper>
-        )}
-
-        <DaysWrapper>
-          {Object.keys(forecast).filter(_date => _date !== date.format('DD-MM-YYYY'))
-            .map((date: string) => (
-              <DayWrapper key={date}>
-                <Day
-                  selected={currentDate === date}
-                  onClick={() => updateDate(date)}
-                  label={moment(date, "DD-MM-YYYY").format("ddd. DD")}
-                  icon={Icons[forecast[date][0].weather[0].icon]}
-                  temperatures={{
-                    min: "1°",
-                    max: "5°"
-                  }}
-                />
-              </DayWrapper>
-            ))}
-        </DaysWrapper>
+        {
+          error 
+          ? (
+            <div>
+              We couldn't load the weather in your city : {error}.
+            </div>
+          )
+          : (
+            <Column>
+              {currentTimeslice && (
+                <TempWithIconWrapper>
+                  <TempWithIcon
+                    icon={Icons[currentTimeslice.weather[0].icon]}
+                    value={`${currentTimeslice.main.temp.toFixed(1)}°`}
+                  />
+                  <TempsOfTheDay min={'1°'} max={'10°'} />
+                </TempWithIconWrapper>
+              )}
+      
+              {currentTimeslice && (
+                <TimeslicesWrapper>
+                  {forecast[currentDate].map((timeslice, index) => (
+                    <TimesliceWrapper>
+                      <Timeslice
+                        label={moment(timeslice.dt_txt).format("HH:mm")}
+                        selected={index === currentSelectedTimesliceIndex}
+                        onClick={() => updateTimesliceIndex(index)}
+                      />
+                    </TimesliceWrapper>
+                  ))}
+                </TimeslicesWrapper>
+              )}
+      
+              <DaysWrapper>
+                {Object.keys(forecast).filter(_date => _date !== date.format('DD-MM-YYYY'))
+                  .map((date: string) => (
+                    <DayWrapper key={date}>
+                      <Day
+                        selected={currentDate === date}
+                        onClick={() => updateDate(date)}
+                        label={moment(date, "DD-MM-YYYY").format("ddd. DD")}
+                        icon={Icons[forecast[date][0].weather[0].icon]}
+                        temperatures={{
+                          min: "1°",
+                          max: "5°"
+                        }}
+                      />
+                    </DayWrapper>
+                  ))}
+              </DaysWrapper>
+            </Column>
+          )
+        }
       </Wrapper>
     );
   }

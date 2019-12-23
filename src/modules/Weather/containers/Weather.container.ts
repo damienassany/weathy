@@ -12,6 +12,7 @@ export type WeatherProps = {
     currentTimeslice: Timeslice | null;
     updateTimesliceIndex(index: number): void;
     updateDate(date: string): void;
+    error: string | null;
 }
 
 const mapStoreToProps = (stores: Stores): WeatherProps => ({
@@ -21,7 +22,8 @@ const mapStoreToProps = (stores: Stores): WeatherProps => ({
     currentTimeslice: stores.weatherStore.currentTimeslice,
     forecast: stores.weatherStore.forecast,
     updateTimesliceIndex: stores.weatherStore.updateCurrentSelectedTimesliceIndex,
-    updateDate: stores.weatherStore.updateCurrentDate
+    updateDate: stores.weatherStore.updateCurrentDate,
+    error: stores.weatherStore.error
 });
 
 export const WeatherContainer = inject(mapStoreToProps)(Weather);
