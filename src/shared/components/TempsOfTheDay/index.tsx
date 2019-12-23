@@ -3,8 +3,8 @@ import { Column } from '../Column';
 import styled from 'styled-components';
 
 type Props = {
-    min: string;
-    max: string;
+    min: number;
+    max: number;
 }
 
 const Temperature = styled.p`
@@ -13,7 +13,7 @@ const Temperature = styled.p`
 
 export const TempsOfTheDay: React.FC<Props> = ({ min, max }) => (
     <Column>
-        <Temperature>min: {min}</Temperature>
-        <Temperature>max: {max}</Temperature>
+        <Temperature>min: {`${min.toFixed(1)}°`}</Temperature>
+        <Temperature>max: {`${max.toFixed(1)}°`}</Temperature>
     </Column>
 )

@@ -8,8 +8,8 @@ type Props = {
     label: string;
     icon: Icons;
     temperatures: {
-        min: string;
-        max: string;
+        min: number;
+        max: number;
     };
     selected?: boolean;
     onClick(): void;

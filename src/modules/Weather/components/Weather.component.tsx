@@ -12,6 +12,7 @@ import { Column } from "../../../shared/components/Column";
 import { WeatherProps } from "../containers/Weather.container";
 import { observer } from "mobx-react";
 import moment from "moment";
+import { weatherStore } from "../../../stores/Weather.store";
 
 const Logo = styled.p`
   width: 140px;
@@ -64,7 +65,8 @@ export class Weather extends React.PureComponent {
       forecast,
       updateDate,
       updateTimesliceIndex,
-      error
+      error,
+      getMinMaxForThisDate
     } = this._props;
     const date = moment();
     
@@ -93,7 +95,7 @@ export class Weather extends React.PureComponent {
                     icon={Icons[currentTimeslice.weather[0].icon]}
                     value={`${currentTimeslice.main.temp.toFixed(1)}°`}
                   />
-                  <TempsOfTheDay min={'1°'} max={'10°'} />
+                  <TempsOfTheDay {...getMinMaxForThisDate(currentDate)} />
                 </TempWithIconWrapper>
               )}
       
@@ -120,10 +122,7 @@ export class Weather extends React.PureComponent {
                         onClick={() => updateDate(date)}
                         label={moment(date, "DD-MM-YYYY").format("ddd. DD")}
                         icon={Icons[forecast[date][0].weather[0].icon]}
-                        temperatures={{
-                          min: "1°",
-                          max: "5°"
-                        }}
+                        temperatures={getMinMaxForThisDate(date)}
                       />
                     </DayWrapper>
                   ))}

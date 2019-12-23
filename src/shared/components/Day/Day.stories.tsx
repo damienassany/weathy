@@ -14,7 +14,7 @@ storiesOf("Day", module)
       onClick={() => null}
       icon={Icons["02d"]}
       label={"Mon. 16"}
-      temperatures={{ min: "1°", max: "5°" }}
+      temperatures={{ min: 1, max: 5 }}
     />
   ))
   .add("Sized", () => (
@@ -23,7 +23,7 @@ storiesOf("Day", module)
         onClick={() => null}
         icon={Icons["02d"]}
         label={"Mon. 16"}
-        temperatures={{ min: "1°", max: "5°" }}
+        temperatures={{ min: 1, max: 5 }}
       />
     </Wrapper>
   ))
@@ -34,7 +34,7 @@ storiesOf("Day", module)
         selected={true}
         icon={Icons["02d"]}
         label={"Mon. 16"}
-        temperatures={{ min: "1°", max: "5°" }}
+        temperatures={{ min: 1, max: 5 }}
       />
     </Wrapper>
   ));

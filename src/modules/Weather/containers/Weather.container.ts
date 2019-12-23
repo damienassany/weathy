@@ -2,7 +2,7 @@ import { Stores } from "../../../stores";
 import { inject } from "mobx-react";
 import { Weather } from "../components/Weather.component";
 import { weatherService } from "../services/Weather.service";
-import { Timeslice, Forecast } from "../../../stores/Weather.store";
+import { Timeslice, Forecast, weatherStore } from "../../../stores/Weather.store";
 
 export type WeatherProps = {
     fetchForecast(): void;
@@ -13,6 +13,7 @@ export type WeatherProps = {
     updateTimesliceIndex(index: number): void;
     updateDate(date: string): void;
     error: string | null;
+    getMinMaxForThisDate(date: string): { min: number, max: number };
 }
 
 const mapStoreToProps = (stores: Stores): WeatherProps => ({
@@ -23,7 +24,8 @@ const mapStoreToProps = (stores: Stores): WeatherProps => ({
     forecast: stores.weatherStore.forecast,
     updateTimesliceIndex: stores.weatherStore.updateCurrentSelectedTimesliceIndex,
     updateDate: stores.weatherStore.updateCurrentDate,
-    error: stores.weatherStore.error
+    error: stores.weatherStore.error,
+    getMinMaxForThisDate: weatherStore.getMinAndMaxForThisDate
 });
 
 export const WeatherContainer = inject(mapStoreToProps)(Weather);

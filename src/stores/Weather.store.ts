@@ -24,7 +24,7 @@ export class WeatherStore {
   @observable forecast: Forecast = {};
   @observable currentDate: string = moment().format("DD-MM-YYYY");
   @observable currentSelectedTimesliceIndex = 0;
-  @observable error: string | null = null;
+  @observable error: string | null = null;
 
   @action updateForecast = (data: Forecast) => {
     this.forecast = data;
@@ -33,21 +33,33 @@ export class WeatherStore {
   @action updateCurrentDate = (date: string) => {
     this.currentDate = date;
     this.currentSelectedTimesliceIndex = 0;
-  }
+  };
 
   @action updateCurrentSelectedTimesliceIndex = (index: number) => {
     this.currentSelectedTimesliceIndex = index;
-  }
+  };
 
   @action updateError = (error: string) => {
     this.error = error;
-  }
+  };
 
   @computed get currentTimeslice() {
-    return this.forecast[this.currentDate] 
-        ? this.forecast[this.currentDate][this.currentSelectedTimesliceIndex]
-        : null;
-  };
+    return this.forecast[this.currentDate]
+      ? this.forecast[this.currentDate][this.currentSelectedTimesliceIndex]
+      : null;
+  }
+
+  getMinAndMaxForThisDate = (date: string) => {
+    const timeslices = this.forecast[date] || [];
+    
+    return timeslices.reduce(
+      (acc, curr) => ({
+        min: Math.min(acc.min, curr.main.temp),
+        max: Math.max(acc.max, curr.main.temp)
+      }),
+      { min: Infinity, max: -Infinity }
+    );
+  }
 }
 
 const weatherStore = new WeatherStore();
